@@ -38,6 +38,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.position = SCNVector3(x: 0, y: 0.1, z: -0.5)
         
         node.geometry = cube
+        
+        sceneView.scene.rootNode.addChildNode(node)
+        
+        sceneView.autoenablesDefaultLighting = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
